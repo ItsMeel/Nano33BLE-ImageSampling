@@ -258,5 +258,5 @@ void executeCommands(int argc, char** argv){
     }
 
     Serial.println("Invalid command, use the command \"help\" to get a list of commands.");
-    }
+}
 #endif
