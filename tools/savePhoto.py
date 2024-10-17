@@ -10,7 +10,7 @@ requestPhotoTimeoutMultiply = 3
 defaultDTR = False
 defaultRTS = False
 defaultMaxSize = 512
-defaultStopBytes = ''
+defaultStopBytes = '\r\n'
 cameraResolutionHeight = 0
 cameraResolutionWidth = 0
 cameraFormat = None
@@ -29,7 +29,7 @@ def communicate_device(port, baudrate, message, timeout=defaultTimeout, dtr=defa
                 print(f"Bytes sent {len(messageSent)}:\n {messageSent}")
             
 
-            messageReceived = serialDevice.read_until(stopBytes, size=maxSize)
+            messageReceived = serialDevice.read_until(expected=stopBytes, size=maxSize)
             if encodeOutput:
                 messageReceived = messageReceived.decode('utf-8')
 

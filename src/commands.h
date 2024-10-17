@@ -41,12 +41,14 @@ struct {
 command_struct help_command_struct; // help_command symbol is already used by .platformio\packages\framework-arduino-mbed\variants\ARDUINO_NANO33BLE\libs\libmbed.a
 
 void help_function(){
-    Serial.println("List of commands:");
+    Serial.print("List of commands:\n");
     for(size_t commandIndex = 0; commandIndex < COMMANDS; commandIndex++){
         Serial.print("\t");
         arg_print_syntax_custom(&Serial, commandList[commandIndex]->argtable, "\t\t");
-        Serial.println(commandList[commandIndex]->helpMsg);
+        Serial.print(commandList[commandIndex]->helpMsg);
+        Serial.print("\n");
     }
+    Serial.println();
 }
 
 struct {

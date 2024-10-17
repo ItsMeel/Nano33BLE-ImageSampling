@@ -113,95 +113,95 @@ int configureFormat(uint8_t format, uint8_t maxTries){
 }
 
 void printCameraSettings(){
-    Serial.println("Current camera settings:");
+    Serial.print("Current camera settings:\n");
 
     Serial.print("\tModel: ");
     switch (cameraModel){
         case OV7670:
-            Serial.println("OV7670.");
+            Serial.print("OV7670.\n");
         break;
 
         case OV7675:
-            Serial.println("OV7675.");
+            Serial.print("OV7675.\n");
         break;
 
         default:
-            Serial.println("Invalid value.");
+            Serial.print("Invalid value.\n");
         break;
     }
 
     Serial.print("\tVSYNC_PIN: ");
-    Serial.println(CAMERA_VSYNC);
-    Serial.print("\tHREF_PIN: ");
-    Serial.println(CAMERA_HREF);
-    Serial.print("\tPCLK_PIN: ");
-    Serial.println(CAMERA_PCLK);
-    Serial.print("\tXCLK_PIN: ");
-    Serial.println(CAMERA_XCLK);
-    Serial.print("\tD0_PIN: ");
-    Serial.println(CAMERA_D0);
-    Serial.print("\tD1_PIN: ");
-    Serial.println(CAMERA_D1);
-    Serial.print("\tD2_PIN: ");
-    Serial.println(CAMERA_D2);
-    Serial.print("\tD3_PIN: ");
-    Serial.println(CAMERA_D3);
-    Serial.print("\tD4_PIN: ");
-    Serial.println(CAMERA_D4);
-    Serial.print("\tD5_PIN: ");
-    Serial.println(CAMERA_D5);
-    Serial.print("\tD6_PIN: ");
-    Serial.println(CAMERA_D6);
-    Serial.print("\tD7_PIN: ");
-    Serial.println(CAMERA_D7);
+    Serial.print(CAMERA_VSYNC);
+    Serial.print("\n\tHREF_PIN: ");
+    Serial.print(CAMERA_HREF);
+    Serial.print("\n\tPCLK_PIN: ");
+    Serial.print(CAMERA_PCLK);
+    Serial.print("\n\tXCLK_PIN: ");
+    Serial.print(CAMERA_XCLK);
+    Serial.print("\n\tD0_PIN: ");
+    Serial.print(CAMERA_D0);
+    Serial.print("\n\tD1_PIN: ");
+    Serial.print(CAMERA_D1);
+    Serial.print("\n\tD2_PIN: ");
+    Serial.print(CAMERA_D2);
+    Serial.print("\n\tD3_PIN: ");
+    Serial.print(CAMERA_D3);
+    Serial.print("\n\tD4_PIN: ");
+    Serial.print(CAMERA_D4);
+    Serial.print("\n\tD5_PIN: ");
+    Serial.print(CAMERA_D5);
+    Serial.print("\n\tD6_PIN: ");
+    Serial.print(CAMERA_D6);
+    Serial.print("\n\tD7_PIN: ");
+    Serial.print(CAMERA_D7);
     
-    Serial.print("\tResolution: ");
+    Serial.print("\n\tResolution: ");
     switch (cameraResolution){
         case VGA:
-            Serial.println("VGA (640x480).");
+            Serial.print("VGA (640x480).\n");
         break;
 
         case CIF:
-            Serial.println("CIF (352x240).");
+            Serial.print("CIF (352x240).\n");
         break;
 
         case QVGA:
-            Serial.println("QVGA (320x240).");
+            Serial.print("QVGA (320x240).\n");
         break;
 
         case QCIF:
-            Serial.println("QCIF (176x144).");
+            Serial.print("QCIF (176x144).\n");
         break;
 
         case QQVGA:
-            Serial.println("QQVGA (160x120).");
+            Serial.print("QQVGA (160x120).\n");
         break;
     
         default:
-            Serial.println("Invalid value.");
+            Serial.print("Invalid value.\n");
         break;
     }
 
     Serial.print("\tFormat: ");
     switch (cameraFormat){
         case YUV422:
-            Serial.println("YUV422 (1 byte per pixel).");
+            Serial.print("YUV422 (1 byte per pixel).\n");
         break;
 
         case RGB444:
-            Serial.println("RGB444 (1 byte per pixel).");
+            Serial.print("RGB444 (1 byte per pixel).\n");
         break;
 
         case RGB565:
-            Serial.println("RGB565 (2 bytes per pixel).");
+            Serial.print("RGB565 (2 bytes per pixel).\n");
         break;
 
         case GRAYSCALE:
-            Serial.println("GRAYSCALE (1 byte per pixel).");
+            Serial.print("GRAYSCALE (1 byte per pixel).\n");
         break;
     
         default:
-            Serial.println("Invalid value.");
+            Serial.print("Invalid value.\n");
         break;
     }
 
